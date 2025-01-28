@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Mensal</title>
+    <link rel="stylesheet" href="./css/relatorio-mensal.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <img src="./images/logo.png" alt="Logo da Empresa" class="logo">
+        <span>Relatório Mensal</span>
+    </header>
+
+    <!-- Layout Principal -->
+    <div class="main-container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <a href="http://192.168.88.97:3030/relatorio.html" class="menu-item">Histórico</a>
+            <a href="http://192.168.88.97:3030/relatorio-mensal.html" class="menu-item">Relatório Mensal</a>
+            <a href="#" class="menu-item">Configurações</a>
+            <button id="btn-sair" class="btn-sair">Sair</button>
+        </aside>
+
+        <!-- Área de Conteúdo -->
+        <main class="content">
+            <!-- Botão Voltar -->
+            <div class="button-container">
+                <button id="btn-voltar" class="btn-voltar">Voltar</button>
+            </div>
+
+            <!-- Filtros -->
+            <div class="filter-container">
+                <label for="mes-filtro">Selecione o Mês:</label>
+                <input type="month" id="mes-filtro" value="">
+            </div>
+
+            <!-- Ranking de Mecânicos -->
+            <section class="section-ranking">
+                <h2>Mecânicos com Mais Requisições</h2>
+                <div id="ranking-mecanicos" class="ranking-container">
+                    <!-- Dados do ranking serão gerados dinamicamente -->
+                </div>
+            </section>
+
+            <!-- Tempo de Espera por Mecânico -->
+            <section class="section-ranking">
+                <h2>Tempo de Espera por Mecânico</h2>
+                <div id="ranking-tempo-espera" class="ranking-container">
+                    <!-- Dados do ranking serão gerados dinamicamente -->
+                </div>
+            </section>
+
+          
+        </main>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 - Nordeste Locações. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script -->
+    <script src="./js/relatorio-mensal.js"></script>
+</body>
+</html>

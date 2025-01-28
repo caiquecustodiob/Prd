@@ -1,0 +1,142 @@
+/* Estilo Geral */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Página de Login */
+.login-page {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Seção de Boas-Vindas */
+.welcome-section {
+    flex: 1;
+    background: url('../images/fundo.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.welcome-text {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-text h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.welcome-text p {
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Card de Login */
+.login-card {
+    flex: 0.4;
+    background-color: #ffffff;
+    color: #202124;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-width: 350px;
+}
+
+.login-card .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #f1f3f4;
+}
+
+.login-card h2 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.login-card form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-card label {
+    font-size: 14px;
+    text-align: left;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-card input:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 4px rgba(26, 115, 232, 0.5);
+}
+
+.login-card button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #1a73e8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-card button:hover {
+    background-color: #155bc3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .login-page {
+        flex-direction: column;
+    }
+
+    .welcome-section {
+        flex: none;
+        height: 50%;
+        text-align: center;
+    }
+
+    .login-card {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+        border-radius: 0;
+    }
+}

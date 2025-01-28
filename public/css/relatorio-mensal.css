@@ -1,0 +1,223 @@
+/* Estilo Geral */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f3f4;
+    color: #202124;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #202124;
+    color: #ffffff;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Logo alinhada à esquerda */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    width: 40px; /* Tamanho pequeno para a logo */
+    height: 40px; /* Garantir que a imagem tenha o mesmo tamanho em altura e largura */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    margin-left: 20px; /* Distância da borda esquerda */
+}
+
+header span {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 15px; /* Distância da logo */
+}
+
+/* Layout Principal */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Barra Lateral */
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar .menu-item {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    color: #202124;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .menu-item:hover {
+    background-color: #f1f3f4;
+    color: #1a73e8;
+}
+
+.sidebar .btn-sair {
+    padding: 15px;
+    text-align: center;
+    background-color: #d93025;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar .btn-sair:hover {
+    background-color: #a52714;
+}
+
+/* Área de Conteúdo */
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Filtros */
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-container label {
+    font-size: 18px;
+}
+
+.filter-container input[type="month"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Botão Voltar */
+.button-container {
+    margin-bottom: 20px;
+}
+
+.button-container .btn-voltar {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #34a853;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container .btn-voltar:hover {
+    background-color: #2c8b45;
+}
+
+/* Seções de Rankings */
+.section-ranking {
+    margin-bottom: 40px;
+}
+
+.section-ranking h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Containers de Rankings */
+.ranking-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ranking-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.ranking-item span {
+    font-size: 16px;
+}
+
+/* Estilo de Mecânicos */
+.ranking-item .mecanico {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.ranking-item .quantidade {
+    color: #1a73e8;
+    font-size: 16px;
+}
+
+/* Botões */
+button {
+    padding: 12px 20px;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1558b0;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background-color: #202124;
+    color: white;
+    padding: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+    }
+
+    .filter-container input[type="month"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .filter-container .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .section-ranking h2 {
+        font-size: 18px;
+    }
+}

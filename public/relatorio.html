@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Requisições</title>
+    <link rel="stylesheet" href="./css/relatorio.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="header-content">
+            <img src="./images/logo.png" alt="Logo da Empresa" class="logo">
+            <span>Relatório de Requisições</span>
+        </div>
+      
+    </header>
+
+    <!-- Layout Principal -->
+    <div class="main-container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <a href="http://192.168.88.97:3030/relatorio-mensal.html" class="menu-item">Relatórios Mensais</a>
+            <a href="#" class="menu-item">Á DEFINIR</a>
+            <a href="#" class="menu-item">Á DEFINIR</a>
+            <button id="btn-sair" class="btn-sair" onclick="irParaTela('logout')">Recebimento</button>
+        </aside>
+
+        <!-- Área de Conteúdo -->
+        <main class="content">
+            <!-- Filtros -->
+            <div class="filter-container">
+                <input type="text" id="pesquisa" placeholder="Pesquisar...">
+                <input type="date" id="data-filtro" class="date-filter">
+                <button id="refresh-btn" class="btn btn-refresh">Atualizar</button>
+                <button id="filter-today-btn" class="btn btn-today">Relatório do Dia</button>
+                <button id="clear-filters-btn" class="btn btn-clear">Limpar Filtros</button>
+            </div>
+
+            <!-- Mensagem Inicial ou Erros -->
+            <div id="mensagem" class="message"></div>
+
+            <!-- Tabela de Dados -->
+            <div id="tabela-container-geral">
+                <!-- A tabela será gerada dinamicamente aqui -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Script -->
+    <script>
+        // Função para redirecionar para outras telas com base na URL dinâmica
+        function irParaTela(tela) {
+            const telas = {
+                'relatorio-mensal': 'relatorio-mensal.html',
+                'relatorio-dia': 'relatorio-dia.html',
+                'configuracoes': 'configuracoes.html',
+                'logout': 'logout.html',
+            };
+
+            const url = `http://${window.SERVER_IP}:${window.SERVER_PORT}/${telas[tela]}`;
+            window.location.href = url;
+        }
+    </script>
+
+    <script src="./js/relatorio.js"></script>
+</body>
+</html>

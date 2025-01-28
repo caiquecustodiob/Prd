@@ -1,0 +1,224 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #0e0d0d;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Barra Superior */
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(21, 23, 26);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-bar h1 {
+    font-size: 1.5rem;
+}
+
+.header-bar nav {
+    display: flex;
+    gap: 10px;
+}
+
+.header-btn {
+    background-color: white;
+    color: #1d1f20;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-btn:hover {
+    background-color: #282d31;
+    color: white;
+}
+
+/* Área principal */
+.main-container {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Botão Requisitar */
+.btn-requisitar {
+    background-color: #1a73e8;
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-requisitar:hover {
+    background-color: #135cbf;
+    transform: scale(1.05);
+}
+
+.btn-requisitar:active {
+    background-color: #0f47a1;
+    transform: scale(1);
+}
+
+/* Mensagem */
+.mensagem {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555555;
+    text-align: center;
+}
+
+/* Painel Principal */
+
+.main-panel {
+    flex: 2;
+    background-color: #dddddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-panel h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+    width: auto;
+}
+
+.btn {
+    background-color: #191d22;
+    color: #cecece;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #131518;
+}
+
+/* Painel Lateral (Histórico) */
+.side-panel {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.side-panel h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#log-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#log-list li {
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background-color: #f0f4f8;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .side-panel {
+        order: -1; /* Move o histórico acima do formulário no mobile */
+    }
+
+    .header-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

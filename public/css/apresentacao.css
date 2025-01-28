@@ -1,0 +1,195 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #202124; /* Cinza escuro */
+    background-color: #f1f3f4; /* Cinza claro */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ /*cabeçalho*/
+
+ .sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #202124;
+    padding: 10px 20px;
+    color: white;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out; /* Suavidade ao esconder/revelar */
+}
+
+
+
+header .logo {
+    height: 40px; /* Ajuste a altura da logo conforme necessário */
+    border-radius: 25px; /* Arredonda as bordas */
+    display: inline-block;
+    vertical-align: middle; /* Centraliza a logo verticalmente em relação ao texto */
+    margin: auto 0; /* Mantém o alinhamento central no eixo Y */
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #1a73e8; /* Azul destaque */
+}
+
+/* Banner */
+.banner {
+    background: url('../images/banner.png') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #155ab6;
+}
+
+/* Seções */
+.section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.feature img {
+    width: 100%;
+    border-bottom: 2px solid #1a73e8;
+}
+
+.feature h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    color: #1a73e8;
+}
+
+.feature p {
+    margin: 0 15px;
+    color: #333;
+}
+/* Novo estilo para as seções adicionais */
+#impacto, #futuro {
+    background-color: #ffffff; /* Cor de fundo branca para contraste */
+    margin-top: 40px;
+}
+
+#impacto h2, #futuro h2 {
+    color: #1a73e8;
+}
+
+ul {
+    text-align: left;
+    margin: 20px auto;
+    display: inline-block;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Seção de Visão para o Futuro */
+#futuro ul li {
+    color: #202124; /* Cinza escuro para dar ênfase */
+}
+
+/* Rodapé */
+footer {
+    background-color: #202124;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #1a73e8;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #155ab6;
+}

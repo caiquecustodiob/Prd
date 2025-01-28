@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/requisicao.css">
+    <title>Requisição</title>
+    <script>
+        // Definindo a URL do WebSocket
+        window.WEBSOCKET_URL = "ws://192.168.88.97:3030/ws"; // Substitua pela URL correta do seu WebSocket
+    </script>
+</head>
+
+<body>
+    <!-- Barra Superior -->
+    <header class="header-bar">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo da Empresa" class="logo">
+            <h1>Requisição Digital</h1>
+        </div>
+        <nav>
+            <button class="header-btn" onclick="location.href='http://192.168.88.97:3030/index.html'">Requisição Terceiros</button>
+            <button class="header-btn" onclick="location.href='http://192.168.88.97:3030/relatorio.html'">Relatórios</button>
+            <button class="header-btn" onclick="location.href='http://192.168.88.97:3030/index.html'">Sair</button>
+        </nav>
+    </header>
+
+    <!-- Área principal -->
+    <main id="requisicao" class="main-container">
+        <!-- Painel Principal -->
+        <div class="main-panel">
+            <!-- Botão Requisitar -->
+            <div class="requisitar-container">
+                <button id="btnRequisitar" class="btn-requisitar">Requisitar</button>
+            </div>
+
+            <!-- Formulário de Apontamento -->
+            <section id="formulario" class="card-panel" style="display: none;">
+                <h2>APONTAMENTO</h2>
+                <form id="requisicao-form">
+                    <div class="form-group">
+                        <label for="om">Ordem de Manutenção (OM):</label>
+                        <input type="text" id="om" name="om" placeholder="Digite a ordem de manutenção" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nl">Patrimônio (NL):</label>
+                        <input type="text" id="nl" name="nl" placeholder="Digite o patrimônio" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mecanico">Mecânico</label>
+                        <select id="mecanico" class="form-control" required>
+                            <option value="" disabled selected>Selecione o mecânico</option>
+                            <option value="AILTON">AILTON</option>
+                            <option value="AISLEY">AISLEY</option>
+                            <option value="ANDRE">ANDRE</option>
+                            <option value="CONRADO">CONRADO</option>
+                            <option value="EDER">EDER</option>
+                            <option value="EXT">EXT</option>
+                            <option value="GABRIEL">GABRIEL</option>
+                            <option value="ITHALO">ITHALO</option>
+                            <option value="JORGE">JORGE</option>
+                            <option value="JOEL">JOEL</option>
+                            <option value="KIKO">KIKO</option>
+                            <option value="RICHERD">RICHERD</option>
+                            <option value="WESLEY">WESLEY</option>
+                            <option value="RIAN">RIAN</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vez">É a primeira ou segunda vez?</label>
+                        <select id="vez" name="vez" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="1">Primeira vez</option>
+                            <option value="2">Segunda vez</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <label>
+                            <input type="checkbox" id="entregue" name="entregue">
+                            Peças já entregues
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Histórico de Requisições -->
+        <aside id="historico" class="side-panel">
+            <h3>HISTÓRICO</h3>
+            <ul id="log-list">
+                <!-- Histórico preenchido dinamicamente -->
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 - Nordeste Locações. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/requisicao.js"></script>
+</body>
+
+</html>

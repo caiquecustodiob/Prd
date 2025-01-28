@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/recebimento.css">
+    <title>Recebimento</title>
+</head>
+<body>
+    <!-- Barra Superior -->
+    <header class="header-bar">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo da Empresa" class="logo">
+            <h1>Recebimento</h1>
+        </div>
+        <nav>
+            <button class="header-btn" onclick="location.href='http://192.168.88.97:3030/relatorio.html'">Relatórios</button>
+            <button class="header-btn" onclick="location.href='http://192.168.88.97:3030/index.html'">Sair</button>
+        </nav>
+    </header>
+
+    <!-- Área Principal -->
+    <div id="recebimento" class="main-container">
+        <!-- Fila de requisições -->
+        <section id="requisicoes" class="main-panel">
+            <h2>Requisições Pendentes</h2>
+            <div id="requisicoes-lista"></div>
+        </section>
+
+        <!-- Área de detalhes e ações -->
+        <section id="detalhes" class="main-panel">
+            <h2>Detalhes da Requisição</h2>
+            <div id="detalhes-requisicao"><p>Nenhuma requisição selecionada.</p></div>
+            <div class="botoes-acoes">
+                <button id="iniciar-separacao" class="btn">Iniciar Separação</button>
+                <button id="confirmar-entrega" class="btn">Confirmar Entrega</button>
+            </div>
+        </section>
+
+        <!-- Histórico de requisições -->
+        <section id="historico" class="side-panel">
+            <h3>Histórico de Requisições</h3>
+            <ul id="historico-list"></ul>
+
+            <!-- Botão Acompanhar -->
+            <a href="http://192.168.88.97:3030/relatorio.html" class="botao-acompanhar">Acompanhar</a>
+        </section>
+    </div>
+
+    <!-- Elemento de áudio para notificações -->
+    <audio id="notificacao-audio" src="assets/notification.mp3" preload="auto"></audio>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 - Nordeste Locações. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/recebimento.js"></script>
+</body>
+</html>
